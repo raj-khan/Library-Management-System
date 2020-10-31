@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ReturnRequest extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+
+    public function bookUsers(){
+        return $this->hasMany(BookUser::class);
+    }
 }

@@ -10,4 +10,22 @@ class Book extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+
+    public function publication(){
+        return $this->belongsTo(Publication::class);
+    }
+
+
+    public function bookCopies(){
+        return $this->hasMany(BookCopy::class);
+    }
+
+    public function bookGenres(){
+        return $this->hasMany(BookGenre::class);
+    }
+
+    public function authorBooks(){
+        return $this->hasMany(AuthorBook::class);
+    }
 }

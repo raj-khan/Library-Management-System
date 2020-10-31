@@ -42,4 +42,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function bookCopies(){
+        return $this->hasMany(BookCopy::class);
+    }
+
+    public function loanRequests(){
+        return $this->hasMany(LoanRequest::class);
+    }
+
+    public function returnRequests(){
+        return $this->hasMany(ReturnRequest::class);
+    }
+
+    public function bookUsers(){
+        return $this->hasMany(BookUser::class);
+    }
 }
