@@ -22,7 +22,7 @@ class AuthorBookFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'role' => 'writer'
         ];
     }
 }

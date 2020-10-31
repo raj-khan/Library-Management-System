@@ -22,7 +22,9 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->streetName,
+            'slug' => $this->faker->slug(5, true),
+            'image' => $this->faker->imageUrl()
         ];
     }
 }

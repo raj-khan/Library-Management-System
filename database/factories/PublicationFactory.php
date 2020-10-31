@@ -22,7 +22,9 @@ class PublicationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->company,
+            'logo' => $this->faker->imageUrl(),
+            'description' => $this->faker->text(),
         ];
     }
 }

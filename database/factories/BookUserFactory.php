@@ -22,7 +22,7 @@ class BookUserFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'status' => 'loan_requested'
         ];
     }
 }

@@ -22,7 +22,7 @@ class BookCopyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'uuid' => $this->faker->unique()->randomNumber(),
         ];
     }
 }
