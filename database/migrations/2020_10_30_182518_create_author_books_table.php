@@ -14,8 +14,13 @@ class CreateAuthorBooksTable extends Migration
     public function up()
     {
         Schema::create('author_books', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('book_id');
+            $table->string('role');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+            $table->foreign('author_id')->references('id')->on('authors');
+            $table->foreign('book_id')->references('id')->on('books');
         });
     }
 
