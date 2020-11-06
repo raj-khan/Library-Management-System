@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Author extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
-
-
+    use HasFactory, SoftDeletes;
 
     public function authors(){
         return $this->hasMany(AuthorBook::class);
