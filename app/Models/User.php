@@ -44,19 +44,23 @@ class User extends Authenticatable
     ];
 
 
-    public function bookCopies(){
+    public function bookCopies()
+    {
         return $this->hasMany(BookCopy::class);
     }
 
-    public function loanRequests(){
+    public function loanRequests()
+    {
         return $this->hasMany(LoanRequest::class);
     }
 
-    public function returnRequests(){
+    public function returnRequests()
+    {
         return $this->hasMany(ReturnRequest::class);
     }
 
-    public function bookUsers(){
+    public function bookUsers()
+    {
         return $this->hasMany(BookUser::class);
     }
 }

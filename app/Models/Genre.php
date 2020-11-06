@@ -10,9 +10,8 @@ class Genre extends Model
 {
     use HasFactory, SoftDeletes;
 
-
-
-    public function bookGenres(){
+    public function bookGenres()
+    {
         return $this->hasMany(BookGenre::class);
     }
 }

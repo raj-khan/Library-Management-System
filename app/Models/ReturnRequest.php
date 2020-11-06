@@ -10,12 +10,13 @@ class ReturnRequest extends Model
 {
     use HasFactory, SoftDeletes;
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-
-    public function bookUsers(){
+    public function bookUsers()
+    {
         return $this->hasMany(BookUser::class);
     }
 }

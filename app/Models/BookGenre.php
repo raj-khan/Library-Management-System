@@ -9,12 +9,14 @@ class BookGenre extends Pivot
 {
     use HasFactory;
 
-    public function book(){
+    public function book()
+    {
         return $this->belongsTo(Book::class);
     }
 
 
-    public function genre(){
+    public function genre()
+    {
         return $this->belongsTo(Genre::class);
     }
 }

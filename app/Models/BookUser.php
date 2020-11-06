@@ -9,19 +9,23 @@ class BookUser extends Pivot
 {
     use HasFactory;
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function bookCopy(){
+    public function bookCopy()
+    {
         return $this->belongsTo(BookCopy::class);
     }
 
-    public function loanRequest(){
+    public function loanRequest()
+    {
         return $this->belongsTo(LoanRequest::class);
     }
 
-    public function returnRequest(){
+    public function returnRequest()
+    {
         return $this->belongsTo(ReturnRequest::class);
     }
 }
