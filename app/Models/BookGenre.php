@@ -14,7 +14,6 @@ class BookGenre extends Pivot
         return $this->belongsTo(Book::class);
     }
 
-
     public function genre()
     {
         return $this->belongsTo(Genre::class);

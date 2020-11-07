@@ -10,12 +10,10 @@ class BookCopy extends Model
 {
     use HasFactory, SoftDeletes;
 
-
     public function book()
     {
         return $this->belongsTo(Book::class);
     }
-
 
     public function bookUsers()
     {
