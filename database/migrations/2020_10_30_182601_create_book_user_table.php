@@ -42,6 +42,20 @@ class CreateBookUserTable extends Migration
      */
     public function down()
     {
+        Schema::table('book_user', function (Blueprint $table) {
+            $table->dropForeign('book_user_user_id_foreign');
+            $table->dropColumn('user_id');
+
+            $table->dropForeign('book_user_book_copy_id_foreign');
+            $table->dropColumn('book_copy_id');
+
+            $table->dropForeign('book_user_loan_request_id_foreign');
+            $table->dropColumn('loan_request_id');
+
+            $table->dropForeign('book_user_return_request_id_foreign');
+            $table->dropColumn('return_request_id');
+        });
+
         Schema::dropIfExists('book_user');
     }
 }

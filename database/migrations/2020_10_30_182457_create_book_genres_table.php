@@ -30,6 +30,13 @@ class CreateBookGenresTable extends Migration
      */
     public function down()
     {
+        Schema::table('book_genres', function (Blueprint $table) {
+            $table->dropForeign('book_genres_book_id_foreign');
+            $table->dropColumn('book_id');
+
+            $table->dropForeign('book_genres_genre_id_foreign');
+            $table->dropColumn('genre_id');
+        });
         Schema::dropIfExists('book_genres');
     }
 }

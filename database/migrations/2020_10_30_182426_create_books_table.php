@@ -35,6 +35,11 @@ class CreateBooksTable extends Migration
      */
     public function down()
     {
+        Schema::table('books', function (Blueprint $table) {
+            $table->dropForeign('books_publication_id_foreign');
+            $table->dropColumn('publication_id');
+        });
+
         Schema::dropIfExists('books');
     }
 }

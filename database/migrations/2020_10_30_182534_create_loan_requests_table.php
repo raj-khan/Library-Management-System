@@ -32,6 +32,11 @@ class CreateLoanRequestsTable extends Migration
      */
     public function down()
     {
+        Schema::table('loan_requests', function (Blueprint $table) {
+            $table->dropForeign('loan_requests_user_id_foreign');
+            $table->dropColumn('user_id');
+        });
+
         Schema::dropIfExists('loan_requests');
     }
 }
