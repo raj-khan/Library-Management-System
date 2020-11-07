@@ -10,9 +10,9 @@ class LoanRequest extends Model
 {
     use HasFactory, SoftDeletes;
 
-    const CONDITION_PENDING = 'pending';
-    const CONDITION_REJECTED = 'rejected';
-    const CONDITION_APPROVED = 'approved';
+    const STATUS_PENDING = 'pending';
+    const STATUS_REJECTED = 'rejected';
+    const STATUS_APPROVED = 'approved';
 
     public function user()
     {

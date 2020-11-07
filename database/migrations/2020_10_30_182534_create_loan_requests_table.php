@@ -17,7 +17,7 @@ class CreateLoanRequestsTable extends Migration
         Schema::create('loan_requests', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('status')->default(LoanRequest::CONDITION_PENDING)->comment('approved/rejected/pending');
+            $table->string('status')->default(LoanRequest::STATUS_PENDING)->comment('approved/rejected/pending');
             $table->integer('status_changed_by');
             $table->string('reason')->nullable()->comment('If rejected, a reason should be provided');
             $table->timestamp('status_change_date')->nullable();

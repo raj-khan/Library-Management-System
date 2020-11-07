@@ -17,7 +17,7 @@ class CreateReturnRequestsTable extends Migration
         Schema::create('return_requests', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('status')->default(ReturnRequest::CONDITION_PENDING)->comment('approved/rejected/pending');
+            $table->string('status')->default(ReturnRequest::STATUS_PENDING)->comment('approved/rejected/pending');
             $table->integer('status_changed_by');
             $table->string('reason')->nullable()->comment('If rejected, a reason should be provided');
             $table->timestamp('status_change_date')->nullable();
