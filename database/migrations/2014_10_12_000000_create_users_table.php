@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 class CreateUsersTable extends Migration
 {
@@ -19,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('email')->unique();
             $table->string('phone');
-            $table->string('role')->default('user')->comment('librarian/user');
+            $table->string('role')->default(User::ROLE_USER)->comment('librarian/user');
             $table->boolean('is_banned')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
