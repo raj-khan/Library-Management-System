@@ -13,9 +13,4 @@ class AuthorBook extends Pivot
     {
         return $this->belongsTo(Author::class);
     }
-
-    public function book()
-    {
-        return $this->belongsTo(Book::class);
-    }
 }
