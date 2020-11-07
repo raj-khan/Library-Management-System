@@ -10,6 +10,10 @@ class ReturnRequest extends Model
 {
     use HasFactory, SoftDeletes;
 
+    const CONDITION_PENDING = 'pending';
+    const CONDITION_REJECTED = 'rejected';
+    const CONDITION_APPROVED = 'approved';
+
     public function user()
     {
         return $this->belongsTo(User::class);

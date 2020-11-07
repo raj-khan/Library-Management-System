@@ -10,6 +10,9 @@ class BookCopy extends Model
 {
     use HasFactory, SoftDeletes;
 
+    const CONDITION_NEW = 'new';
+    const CONDITION_OLD = 'old';
+
     public function book()
     {
         return $this->belongsTo(Book::class);

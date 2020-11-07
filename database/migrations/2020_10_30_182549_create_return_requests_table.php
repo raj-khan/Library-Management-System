@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\ReturnRequest;
 
 class CreateReturnRequestsTable extends Migration
 {
@@ -16,7 +17,7 @@ class CreateReturnRequestsTable extends Migration
         Schema::create('return_requests', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('status')->default('pending')->comment('approved/rejected/pending');
+            $table->string('status')->default(ReturnRequest::CONDITION_PENDING)->comment('approved/rejected/pending');
             $table->integer('status_changed_by');
             $table->string('reason')->nullable()->comment('If rejected, a reason should be provided');
             $table->timestamp('status_change_date')->nullable();
