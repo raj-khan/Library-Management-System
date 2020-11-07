@@ -20,7 +20,7 @@ class Book extends Model
         return $this->hasMany(BookCopy::class);
     }
 
-    public function bookGenres()
+    public function genres()
     {
         return $this->hasMany(BookGenre::class);
     }
