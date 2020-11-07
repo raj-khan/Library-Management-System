@@ -15,7 +15,7 @@ class Book extends Model
         return $this->belongsTo(Publication::class);
     }
 
-    public function bookCopies()
+    public function copies()
     {
         return $this->hasMany(BookCopy::class);
     }
