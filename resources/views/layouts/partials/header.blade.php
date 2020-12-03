@@ -18,7 +18,8 @@
                         <!-- User image -->
                         <li class="user-header">
                             <p>{{auth()->user()->name}}
-                                <small>Admin</small>
+                                <small>{{auth()->user()->getStringRoleAttribute()}}</small>
+                                {{--<small>Admin</small>--}}
                             </p>
                         </li>
                         <li class="user-footer">

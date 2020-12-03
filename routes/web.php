@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware'=>'guest'],function(){
-    Route::get('/', function(){
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/', function () {
         return redirect()->to('login');
     });
-    Route::get('login','UserController@index');
+    Route::get('login', 'UserController@index');
     Route::post('login', 'Auth\LoginController@login');
     Route::get('registration', 'Auth\RegisterController@showRegistrationForm');
     Route::post('registration', 'Auth\RegisterController@register');
@@ -27,14 +27,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-//Route::get('/users', 'UserController@index')->middleware(['auth'])->name('users');
-
-Route::group(['middleware'=>'auth'],function(){
-    Route::get('users','UserController@index');
-    Route::get('get-user','UserController@getAllUsers');
-    Route::post('save-user','UserController@store');
-    Route::delete('delete-user/{id}','UserController@deleteUser');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('users', 'UserController@index');
+    Route::get('get-user', 'UserController@getAllUsers');
+    Route::post('save-user', 'UserController@store');
+    Route::delete('delete-user/{id}', 'UserController@deleteUser');
 });
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

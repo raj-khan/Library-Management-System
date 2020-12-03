@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('role')->default(User::ROLE_USER)->comment('librarian/user');
-            $table->boolean('is_banned')->default(false);
+            $table->boolean('is_banned')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

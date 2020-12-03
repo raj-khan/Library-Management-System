@@ -2,34 +2,13 @@
 @section('title','User | LMS')
 @section('mainContent')
     <style>
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-    ng-cloak {
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak] {
             display: none !important;
-        }
-        .img-icon{
-            display: inline-block;
-            float: left;
-            width: 48px;
-            height: 48px;
-            margin-left: 10px;
-            margin-top: 13.5px;
         }
         .img-icon img{
             border:1px solid #ddd;
             height:100%;
             width: 100%;
-        }
-        .file-heading{
-            font-weight: normal!important;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-top: 0 !important;
-            padding: 0;
-            height: auto !important;
-        }
-        .k-upload-files{
-            max-height: calc(30vh)!important;
-            overflow: auto;
         }
     </style>
     <div ng-app='app' ng-controller='defaultController' ng-cloak>
@@ -101,18 +80,16 @@
                 </div>
             </form>
         </script>
-
     </div>
-
 
     <script>
         var sl=0;
         var app= angular.module('app',['kendo.directives']);
-        app.controller('defaultController',function($scope,$http){
+        app.controller('defaultController',function($scope){
             $scope.user_id="{{auth()->user()->id}}";
             $scope.status_list = [
-                {name:'Un-Ban/Active',id:0},
-                {name:'Banned',id:1}
+                {name:'Un-Ban/Active',id: 0},
+                {name:'Banned',id: 1}
             ];
             $scope.user_role_list = [
                 {name:'Librarian',id:1},
@@ -280,6 +257,7 @@
                             role:e.model.role
                         };
                         $scope.saveCurrentData($scope.pass_data);
+                        console.log($scope.pass_data);
                     },
                     change: function(e) {
                         $.map(this.select(), function(item) {

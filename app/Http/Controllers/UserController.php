@@ -12,7 +12,6 @@ class UserController extends Controller
     public function index(){
         return view('pages.user.index');
     }
-
     /**
      * get All User
      */
@@ -27,12 +26,10 @@ class UserController extends Controller
         return response()->json(['users'=>$users,'total'=>$total],200);
     }
 
-
     public function store(Request $request){
         $status='';
         if(is_null($request->id)){
             $validation=Validator::make(request()->all(),[
-
                 'name'=>'required',
                 'email'=>"required|email|unique:users,email",
                 'phone'=>'required',
@@ -51,7 +48,6 @@ class UserController extends Controller
             return response()->json(['status'=>$status],200);
         }
         $validation=Validator::make(request()->all(),[
-
             'name'=>'required',
             'email'=>"required|email|unique:users,email,".$request->id,
             'phone'=>'required',
@@ -77,7 +73,6 @@ class UserController extends Controller
         return response()->json(['status'=>$status],200);
     }
 
-
     /**
      * @Delete User Data
      */
@@ -99,7 +94,6 @@ class UserController extends Controller
         $status .='User not found for Delete operation';
         return response()->json(['status'=>$status],200);
     }
-
 
     /**
      * @param array $data

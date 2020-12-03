@@ -24,12 +24,12 @@
             </li>
 
         @if(auth()->guard()->check())
-            @if(auth()->user()->role===1)
+            @if(auth()->user()->role==1)
                 <!--====== Users========-->
                     <li>
                         <a href="{{url('users')}}">
                             <i class="fa fa-user"></i>
-                            <span>User</span>
+                            <span>Users</span>
                             <span class="pull-right-container">
                         <i class="pull-right"></i>
                     </span>

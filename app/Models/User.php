@@ -25,6 +25,8 @@ class User extends Authenticatable
         'email',
         'phone',
         'password',
+        'is_banned',
+        'role',
     ];
 
     /**
@@ -76,17 +78,7 @@ class User extends Authenticatable
             case 0:
                 return 'Un-Ban/Active';
             case 1:
-                return 'Ban';
-        }
-    }
-
-    public function userType()
-    {
-        switch ($this->role) {
-            case 1:
-                return 'Librarian';
-            case 2:
-                return 'User';
+                return 'Banned';
         }
     }
 
