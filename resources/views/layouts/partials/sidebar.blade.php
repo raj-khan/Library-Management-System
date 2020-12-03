@@ -7,9 +7,9 @@
     </li>
 
     <li class="nav-item" title="This is not calculate in Income/Expense">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('users') }}">
             <i class="fas fa-fw fa-sticky-note"></i>
-            <span>Menu</span></a>
+            <span>Users</span></a>
     </li>
 
 </ul>
