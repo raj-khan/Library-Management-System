@@ -1,17 +1,36 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.master')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
+@section('content')
+
+
+    <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+        </ol>
+
+
+        <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-sm-12 mb-3">
+                <ul class="list-group">
+                    <li class="list-group-item bg-info text-center text-white">
+                        <span>Welcome</span>
+                    </li>
+
+
+                </ul>
             </div>
+
         </div>
     </div>
-</x-app-layout>
+
+@endsection
+
+@push('js')
+
+
+@endpush

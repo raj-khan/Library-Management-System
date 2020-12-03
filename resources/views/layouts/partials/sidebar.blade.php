@@ -1,6 +1,6 @@
 <ul class="sidebar navbar-nav">
-    <li class="nav-item {{ Route::currentRouteName() == 'index' ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('index') }}">
+    <li class="nav-item {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
