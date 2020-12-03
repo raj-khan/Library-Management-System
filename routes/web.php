@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware'=>'guest'],function(){
+    Route::get('/', function(){
+        return redirect()->to('login');
+    });
+    Route::get('login','UserController@index');
+    Route::post('login', 'Auth\LoginController@login');
+    Route::get('registration', 'Auth\RegisterController@showRegistrationForm');
+    Route::post('registration', 'Auth\RegisterController@register');
 });
 
 Route::get('/dashboard', function () {
