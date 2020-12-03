@@ -46,3 +46,15 @@
     width: 230px;
     color: #fff;
 }
+
+.copyright_custom span > a{
+    color: #b07756 !important;
+}
+
+.k-grid-content {
+    height: calc(100vh - 241px) !important;
+}
+
+.k-grid-toolbar .k-button {
+    float: right !important;
+}

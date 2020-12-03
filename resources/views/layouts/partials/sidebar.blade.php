@@ -7,14 +7,13 @@
 
             <div class="pull-left info">
                 <p>{{auth()->user()->name}}</p>
-                <a href="#"><i class="fa fa-circle text-success"> Online</i></a>
+                <a href="javascript:void()"><i class="fa fa-circle text-success"> Online</i></a>
             </div>
         </div>
 
         <ul class="sidebar-menu">
-
             <!--====== Dashboard========-->
-            <li class="#">
+            <li>
                 <a href="{{url('dashboard')}}">
                     <i class="fa fa-tachometer"></i>
                     <span>Dashboard</span>
@@ -27,7 +26,7 @@
         @if(auth()->guard()->check())
             @if(auth()->user()->role===1)
                 <!--====== Users========-->
-                    <li class="#">
+                    <li>
                         <a href="{{url('users')}}">
                             <i class="fa fa-user"></i>
                             <span>User</span>
@@ -41,8 +40,12 @@
 
             <li class="header">MAIN PANEL</li>
 
+            {{--Copyright--}}
             <li class="header copyright_custom">
-                &copy; 2020, <span><a style="color: #b07756;" target="_blank" href="https://learning.megaminds.technology/">MegaMinds Learning</a></span>
+                &copy; 2020, <span>
+                    <a target="_blank" href="https://learning.megaminds.technology/">
+                        MegaMinds Learning</a>
+                </span>
             </li>
         </ul>
     </section>
