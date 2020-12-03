@@ -43,6 +43,7 @@
     <script src="{{asset('assets/kendo/js/cultures/kendo.culture.cs-CZ.min.js')}}"></script>
     <script src="{{asset('assets/kendo/js/cultures/kendo.culture.pl-PL.min.js')}}"></script>
     <script src="{{asset('assets/kendo/js/cultures/kendo.culture.zh-CN.min.js')}}"></script>
+    @stack('css')
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -55,7 +56,7 @@
         </div>
     </div>
 </div>
-
+@stack('js')
 @include('layouts.partials.footer')
 </body>
 </html>
