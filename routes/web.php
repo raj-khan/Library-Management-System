@@ -23,19 +23,6 @@ Route::group(['middleware'=>'guest'],function(){
     Route::post('registration', 'Auth\RegisterController@register');
 });
 
-
-
-
-//Route::group(['middleware'=>'auth'],function(){
-//
-//    Route::get('/dashboard', function () {
-//        return view('dashboard');
-//    })->middleware(['auth'])->name('dashboard');
-//
-//    Route::get('users','UserController@index');
-//
-//});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

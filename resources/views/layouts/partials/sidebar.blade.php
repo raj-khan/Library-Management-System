@@ -24,25 +24,27 @@
                 </a>
             </li>
 
-
-            <!--====== Users========-->
-            <li class="#">
-                <a href="{{url('users')}}">
-                    <i class="fa fa-user"></i>
-                    <span>User</span>
-                    <span class="pull-right-container">
+        @if(auth()->guard()->check())
+            @if(auth()->user()->role===1)
+                <!--====== Users========-->
+                    <li class="#">
+                        <a href="{{url('users')}}">
+                            <i class="fa fa-user"></i>
+                            <span>User</span>
+                            <span class="pull-right-container">
                         <i class="pull-right"></i>
                     </span>
-                </a>
-            </li>
+                        </a>
+                    </li>
+                @endif
+            @endif
 
             <li class="header">MAIN PANEL</li>
 
 
             <li style="position: fixed;
     bottom: 0; width: 230px; color: #fff;" class="header">
-                &copy; 2020,  <span><a style="color: #b07756;" target="_blank"
-                         href="https://raajkhan.com/">Raajkhan.Com</a></span>
+                &copy; 2020, <span><a style="color: #b07756;" target="_blank" href="https://learning.megaminds.technology/">MegaMinds Learning</a></span>
             </li>
         </ul>
     </section>
