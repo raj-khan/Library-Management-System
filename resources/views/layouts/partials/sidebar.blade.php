@@ -41,9 +41,7 @@
 
             <li class="header">MAIN PANEL</li>
 
-
-            <li style="position: fixed;
-    bottom: 0; width: 230px; color: #fff;" class="header">
+            <li class="header copyright_custom">
                 &copy; 2020, <span><a style="color: #b07756;" target="_blank" href="https://learning.megaminds.technology/">MegaMinds Learning</a></span>
             </li>
         </ul>
