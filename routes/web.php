@@ -44,6 +44,9 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('users','UserController@index');
+    Route::get('get-user','UserController@getAllUsers');
+    Route::post('save-user','UserController@store');
+    Route::delete('delete-user/{id}','UserController@deleteUser');
 });
 
 
