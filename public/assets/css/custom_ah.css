@@ -1,0 +1,149 @@
+
+@font-face {
+  font-family: 'GoodTimes';
+  src: url('../fonts/goodtime.ttf');
+}
+.logo-lg{
+    font-family: 'GoodTimes', 'Georgia', serif!important;
+}
+img {
+    /* border-radius: 50%; */
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:transform .8s ease-in-out;
+
+}
+.info-box {
+
+    min-height: 95px;
+
+}
+.info-box:hover{
+    background: #d2d8e0;
+
+}
+.info-box:hover img{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.skin-blue .sidebar-menu>li.active>a {
+
+    background-color: #384445;
+}
+.info-box-number {
+    display: block;
+    font-weight: bold;
+    font-size: 22px;
+    word-break: break-all;
+}
+.progress-description,
+.info-box-text {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: none;
+}
+
+.dashboardContent{
+
+    color: #000;
+}
+.bg-black {
+    background-color: #333 !important;
+}
+
+.skin-blue .main-header .navbar {
+    /*background-color: #0E4F9F;*/
+    /*background-color: #3c8dbc;*/
+    background-color: #5661b0;
+}
+
+.skin-blue .main-header .logo {
+    background-color: #BBBCBE;
+}
+
+.info-box-icon {
+
+    height: 95px;
+    width: 95px;
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 768px)
+{
+    .info-box-number {
+        font-size: 17px;
+    }
+
+}
+::-webkit-scrollbar {width: 12px;height: 12px;}
+.k-grid::-webkit-scrollbar {width: 12px!important;}
+.k-grid-content::-webkit-scrollbar {
+    width: 12px!important;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, 0.3);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(50, 50, 50, 0.1);
+}
+
+.box{margin-bottom: 0px!important;}
+.box-body{height: calc(100vh - 125px)!important;overflow: auto;}
+.k-grid-content {height: calc(100vh - 246px);overflow: auto!important;}
+.k-filter-row th, .k-grid-header th.k-header {text-align: center!important;font-weight: bold;}
+.k-grid td{text-align: center!important;}
+.grid-cell-content{text-align: center!important;}
+.km-switch-background, .km-switch-handle {color: #0085e4!important;}
+div.k-edit-form-container {width: 100%;}
+/*div.k-edit-form-container .control-label{width: 100%!important;}*/
+div.k-edit-form-container .divalert {width: 100%;display: table;}
+div.k-edit-form-container p {text-align:center; vertical-align: middle;display: table-cell;}
+#div_machine .k-textbox{width: 60%!important;}
+#div_machine .k-list-filter .k-textbox{width: 100%!important;}
+#div_machine #edit_form .row{margin: 0px!important;}
+#div_machine #edit_form .col-md-6{width: 44%!important;}
+#edit_form .swtch{width: 30%!important;padding-left: 0px;}
+.k-grid-content-locked{float: right !important;}
+.k-grid-header-locked{float: right !important;}
+.k-grid ::-webkit-scrollbar {width: 5!important;height: 10px!important;}
+#tbl_switch td{border-top: 0px solid #f4f4f4!important;}
+#tbl_switch tr{border:none!important;}
+.k-grid-toolbar{text-align: right!important;}
+.k-state-default .k-grid-cancel{float:left!important;}
+.k-grid-content-locked, .k-grid-footer-locked, .k-grid-header-locked{border:0px!important;}
+.main-sidebar .header{font-size: 12px!important;color:#FFF!important;}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #0E4F9F!important;
+}
+.skin-blue .main-header .logo:hover {
+    background-color: #BBBCBE!important;
+}
+.sidebar-menu, .main-sidebar .user-panel, .sidebar-menu>li.header{
+    overflow: visible !important;
+}
+.sidebar-menu .treeview-menu>li{
+    overflow: hidden;
+}
+.footer_version{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer_version>li.header{
+    background: #2c3b41!important;
+}
+.user-panel>.image>img{object-fit: cover!important;height:45px !important}
+.box-header>.fa, .box-header>.glyphicon, .box-header>.ion, .box-header .box-title {
+    font-size: 16px!important;
+    font-weight: 700!important;
+}
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>img {
+    object-fit: cover!important;
+}
+.navbar-nav>.user-menu .user-image {
+    object-fit: cover!important;
+}
