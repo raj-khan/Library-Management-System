@@ -1,0 +1,45 @@
+/*Contacts View*/
+#contactsGrid .k-grid-content{
+    height: calc(100vh - 285px) !important;
+}
+.mobile_name_list{
+    font-size: 20px;
+}
+.mobile_number_list{
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+.nav-stacked>li.active>a{
+    background: #a9adb4 !important;
+    color: #fff !important;
+    border-top: 0 !important;
+    border-left: none !important;
+}
+
+
+.nav-stacked>li>a:hover{
+    background: #777 !important;
+    color: #fff !important;
+}
+
+.sidebar-menu li {
+    font-family: goodtime;
+}
+
+/*body{*/
+    /*font-family: goodtime;*/
+/*}*/
+
+
+.small-box .inner h3{
+    font-family: 'GoodTimes', 'Georgia', serif!important;
+    font-size: 25px;
+}
+.small-box{
+    cursor: pointer;
+}
+
+.logo-mini{
+    font-family: 'GoodTimes', 'Georgia', serif!important;
+}
