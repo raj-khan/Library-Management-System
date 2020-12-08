@@ -1,36 +1,20 @@
 @extends('layouts.master')
+@section('title', 'Dashboard | LMS')
+@section('mainContent')
 
-@section('content')
-
-
-    <div class="container-fluid">
-
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-        </ol>
-
-
-        <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-sm-12 mb-3">
-                <ul class="list-group">
-                    <li class="list-group-item bg-info text-center text-white">
-                        <span>Welcome</span>
-                    </li>
-
-
-                </ul>
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>2</h3>
+                    <p> Users</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
-
         </div>
     </div>
 
 @endsection
-
-@push('js')
-
-
-@endpush

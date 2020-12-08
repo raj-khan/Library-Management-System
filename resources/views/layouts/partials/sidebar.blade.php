@@ -7,14 +7,13 @@
 
             <div class="pull-left info">
                 <p>{{auth()->user()->name}}</p>
-                <a href="#"><i class="fa fa-circle text-success"> Online</i></a>
+                <a href="javascript:void()"><i class="fa fa-circle text-success"> Online</i></a>
             </div>
         </div>
 
         <ul class="sidebar-menu">
-
             <!--====== Dashboard========-->
-            <li class="#">
+            <li>
                 <a href="{{url('dashboard')}}">
                     <i class="fa fa-tachometer"></i>
                     <span>Dashboard</span>
@@ -24,25 +23,29 @@
                 </a>
             </li>
 
-
-            <!--====== Users========-->
-            <li class="#">
-                <a href="{{url('users')}}">
-                    <i class="fa fa-user"></i>
-                    <span>User</span>
-                    <span class="pull-right-container">
+        @if(auth()->guard()->check())
+            @if(auth()->user()->role==1)
+                <!--====== Users========-->
+                    <li>
+                        <a href="{{url('users')}}">
+                            <i class="fa fa-user"></i>
+                            <span>Users</span>
+                            <span class="pull-right-container">
                         <i class="pull-right"></i>
                     </span>
-                </a>
-            </li>
+                        </a>
+                    </li>
+                @endif
+            @endif
 
             <li class="header">MAIN PANEL</li>
 
-
-            <li style="position: fixed;
-    bottom: 0; width: 230px; color: #fff;" class="header">
-                &copy; 2020,  <span><a style="color: #b07756;" target="_blank"
-                         href="https://raajkhan.com/">Raajkhan.Com</a></span>
+            {{--Copyright--}}
+            <li class="header copyright_custom">
+                &copy; 2020, <span>
+                    <a target="_blank" href="https://learning.megaminds.technology/">
+                        MegaMinds Learning</a>
+                </span>
             </li>
         </ul>
     </section>

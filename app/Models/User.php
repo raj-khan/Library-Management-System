@@ -12,8 +12,8 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes;
 
-    const ROLE_USER = 'user';
-    const ROLE_LIBRARIAN = 'librarian';
+    const ROLE_USER = '2';
+    const ROLE_LIBRARIAN = '1';
 
     /**
      * The attributes that are mass assignable.
@@ -25,6 +25,8 @@ class User extends Authenticatable
         'email',
         'phone',
         'password',
+        'is_banned',
+        'role',
     ];
 
     /**
@@ -38,6 +40,14 @@ class User extends Authenticatable
     ];
 
     /**
+     * @var array
+     */
+    protected $appends = [
+        'string_role',
+        'string_status'
+    ];
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -45,6 +55,32 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * @return string
+     */
+    public function getStringRoleAttribute()
+    {
+        switch ($this->role) {
+            case 1:
+                return 'Librarian';
+            case 2:
+                return 'User';
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getStringStatusAttribute()
+    {
+        switch ($this->is_banned) {
+            case 0:
+                return 'Un-Ban/Active';
+            case 1:
+                return 'Banned';
+        }
+    }
 
     public function bookCopies()
     {

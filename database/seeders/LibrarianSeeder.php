@@ -18,7 +18,7 @@ class LibrarianSeeder extends Seeder
             'password' => bcrypt('password'),
             'email' => 'librarian@librarian.com',
             'phone' => '01915151681',
-            'role' => 'librarian',
+            'role' => '1',
         ]);
     }
 }
